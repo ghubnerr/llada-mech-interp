@@ -30,7 +30,6 @@ idna==3.10
 iniconfig==2.1.0
 jinja2==3.1.6
 kiwisolver==1.4.9
--e file:///a/buffalo.cs.fiu.edu./disk/jccl-002/homes/glucc002/Desktop/llada-mech-interp
 markupsafe==3.0.2
 matplotlib==3.10.6
 mpmath==1.3.0
