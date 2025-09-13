@@ -32,7 +32,7 @@ def load_model_and_tokenizer(
     device: str = "cuda" if torch.cuda.is_available() else "cpu"
     model: AutoModel = (
         AutoModel.from_pretrained(
-            model_name, trust_remote_code=True, torch_dtype=torch.bfloat16
+            model_name, trust_remote_code=True, dtype=torch.bfloat16
         )
         .to(device)
         .eval()
@@ -50,7 +50,7 @@ def get_generation_parameters(
     block_length: int = 8,
     temperature: float = 0.0,
     remasking: Literal["low_confidence", "random"] = "low_confidence",
-    mask_id: int = 126336,
+    mask_id: int = 50256,
 ) -> Dict[str, Any]:
     """
     Returns default generation parameters for LLaDA diffusion language models.
